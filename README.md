@@ -2,16 +2,34 @@
 
 ## Preliminaries:
 
-Before running you should change the following variables in the `ntt_test.cpp` file.
+Download a new copy of the test input and test output for NTT. Get the absolute/global paths of `in` and `out` directories for adding to the code.
 
-- `const std::string IN_FILE_PATH = "/home/<YOURUSERNAME>/nttcomp/data/in/";`
-- `const std::string OUT_FILE_PATH = "/home/<YOURUSERNAME>/nttcomp/data/out/";`
+Before running you should change the following variables in the `ntt_2_24_opt/main.cpp` file.
+
+<!-- ### `ntt/src/ntt_host.cpp`
+
+- `const std::string IN_FILE_DATA = "/home/<YOURUSERNAME>/ntt_2_24/data/in/fully_random_2_24";`
+- `const std::string IN_FILE_OMEGA = "/home/<YOURUSERNAME>/ntt_2_24/data/omega_powers.out";`
+- `const std::string OUT_FILE = "/home/<YOURUSERNAME>/ntt_2_24/data/out/fully_random_2_24_reorder";` -->
+
+### `ntt_2_24_opt/main.cpp`
+
+- `const std::string IN_FILE_PATH = "/home/<YOURUSERNAME>/ntt_2_24_opt/data/data/in/";`
+- `const std::string OUT_FILE_PATH = "/home/<YOURUSERNAME>/ntt_2_24_opt/data/out/";`
+- `const std::string POWERS_FILE_PATH = "/home/<YOURUSERNAME>/ntt_2_24_opt/data/";`
 
 Change the paths so that they point at the directores `in` and `out` which contain files named with the prefixes `linear_2_` or `fully_random_2_`.
 
-## Setup:
+## File/Directory Structure:
 
-1. Activate the environment by using the following commands.
+- `ntt` - Design source files.
+- `ntt_2_24_opt`
+- `ntt_kernels` - Host code and hardware kernel implementations for NTT.
+- `ntt_system` - Hardware build files.
+- `ntt_system_hw_link` - Hardware and host link build files.
+- `sdx_export_metadata`
+
+<!-- 1. Activate the environment by using the following commands.
 
 ```
 ################################################################################
@@ -54,4 +72,4 @@ The synthesis should complete without and violations. If your synthesis complete
 
 Once you have completed the C Synthesis you can run the cosimulation. The cosimulation first runs your C code implementation. Then it will attempt to simulate the C Synthesized RTL and check whether the test cases in the testbench(s) pass or not.
 
-Your cosimulation should complete without error and all tests should pass.
+Your cosimulation should complete without error and all tests should pass. -->
